@@ -11,10 +11,10 @@ const ResumePage = () => {
   }, []);
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-300 to-white p-10">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-4xl">
-        <h1 className="text-3xl font-bold mb-4">Download My Resume</h1>
-        <p className="mb-4 text-gray-700">Click the button below to download my resume or view a preview.</p>
+    <main className="flex flex-col items-center justify-center min-h-scree p-10">
+      <div className="bg-gray-900 p-8 rounded-lg shadow-md w-full max-w-4xl">
+        <h1 className="text-3xl text-amber-300 font-bold mb-4">Download My Resume</h1>
+        <p className="mb-4 text-gray-400 ">Click the button below to download my resume or view a preview.</p>
         
         {/* PDF Preview */}
         <div className="mb-4">
@@ -23,7 +23,7 @@ const ResumePage = () => {
               src="/"
               width="100%"
               height="600px"
-              className="border border-gray-300 rounded-lg"
+              className="border border-gray-800 rounded-lg"
               title="Resume Preview"
             >
               This browser does not support PDFs. Please download the PDF to view it: <a href="/files/resume.pdf">Download PDF</a>.

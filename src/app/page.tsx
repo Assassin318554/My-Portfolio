@@ -20,7 +20,7 @@ const pacifico = Pacifico({
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-300 to-white p-10">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-t from-gray-950 to-blue-900 text-white p-10">
       <motion.div
         className="text-center"
         initial="initial"
@@ -38,29 +38,27 @@ export default function Home() {
             alt="Nahin Intesher"
             width={200}
             height={200}
-            className="rounded-full border-4 border-gray-900 shadow-lg"
+            className="rounded-full border-4 border-amber-900 shadow-lg"
           />
         </motion.div>
         <motion.h1
-          className="text-5xl font-extrabold mb-4 text-gray-900"
+          className="text-5xl font-extrabold mb-4 "
           variants={fadeInUp}
         >
           Nahin Intesher
         </motion.h1>
-        <motion.h2
-          className="text-2xl text-gray-600 mb-6"
-          variants={fadeInUp}
-        >
+        <motion.h2 className="text-2xl text-amber-300 mb-6" variants={fadeInUp}>
           Problem Solver & Dedicated Developer
         </motion.h2>
         <motion.p
-          className="text-center max-w-3xl mx-auto mb-10 text-gray-700 leading-relaxed"
+          className="text-center max-w-3xl mx-auto mb-10 leading-relaxed"
           variants={fadeInUp}
         >
           I am passionate about building innovative solutions and solving
           complex problems through technology. Currently pursuing a BSCSE at
-          United International University. With a focus on Mobile App Development, Cyber Security, and
-          Machine Learning, I'm always striving to push boundaries.
+          United International University. With a focus on Mobile App
+          Development, Cyber Security, and Machine Learning, I'm always striving
+          to push boundaries.
         </motion.p>
         <motion.div
           className="flex flex-wrap justify-center gap-6 mb-10"
@@ -85,33 +83,6 @@ export default function Home() {
             Contact
           </Link>
         </motion.div>
-      </motion.div>
-      <motion.div
-        className="mt-16 text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 0.8, duration: 0.6 }}
-      >
-        <p className="text-lg font-semibold text-gray-700 mb-6">
-          Featured Skills
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          {["Java", "React", "Node.js", "Flutter", "Python", "MySQL"].map(
-            (skill, index) => (
-              <motion.span
-                key={skill}
-                className="bg-gray-500 text-white px-5 py-3 rounded-md text-sm font-medium shadow-sm"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ delay: 1 + index * 0.1 }}
-              >
-                {skill}
-              </motion.span>
-            )
-          )}
-        </div>
       </motion.div>
     </div>
   );

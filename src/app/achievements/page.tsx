@@ -25,7 +25,7 @@ const achievements = [
           href="https://codeforces.com/profile/Nahin_Intesher"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-blue-600 underline hover:text-blue-800 transition-colors duration-200"
+          className="inline-flex items-center text-teal-400 underline hover:text-teal-600 transition-colors duration-200"
         >
           <FontAwesomeIcon icon={faCode} className="w-5 h-5 mr-2" />
           View my Codeforces profile
@@ -44,7 +44,7 @@ const achievements = [
           href="https://leetcode.com/u/NahinIntesher"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-blue-600 underline hover:text-blue-800 transition-colors duration-200"
+          className="inline-flex items-center text-teal-400 underline hover:text-teal-600 transition-colors duration-200"
         >
           <FontAwesomeIcon icon={faPuzzlePiece} className="w-5 h-5 mr-2" />
           Visit my LeetCode profile
@@ -57,12 +57,12 @@ const achievements = [
 export default function Achievements() {
   return (
     <div className="max-w-4xl mx-auto p-10">
-      <h1 className="text-3xl font-bold mb-8">Achievements</h1>
+      <h1 className="text-3xl font-bold mb-8 text-amber-300">Achievements</h1>
       <div className="space-y-6">
         {achievements.map((achievement, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg p-6">
+          <div key={index} className="bg-gray-900 shadow-lg rounded-lg p-6">
             <h3 className="text-xl font-semibold mb-3">{achievement.title}</h3>
-            <div className="text-gray-700">{achievement.description}</div>
+            <div className="">{achievement.description}</div>
           </div>
         ))}
       </div>

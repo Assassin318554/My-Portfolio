@@ -22,9 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className} bg-gray-100 flex flex-col min-h-screen`}>
+      <body className={`${quicksand.className} bg-gradient-to-t from-gray-950 to-blue-900 text-white flex flex-col min-h-screen `}>
         <Header />
-        <main className="flex-grow">
+        <main className="flex-grow min-w-screen">
           <AnimatePresence mode="wait">
             {children}
           </AnimatePresence>

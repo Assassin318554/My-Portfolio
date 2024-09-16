@@ -73,12 +73,12 @@ const academicProjects = [
 export default function Projects() {
   return (
     <div className="max-w-6xl mx-auto p-10">
-      <h1 className="text-4xl font-extrabold mb-12 text-gray-800">
+      <h1 className="text-4xl font-extrabold mb-12 text-amber-300">
         My Projects
       </h1>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-semibold mb-6 text-gray-700 border-b-2 border-gray-300 pb-2">
+        <h2 className="text-3xl font-semibold mb-6 text-teal-300 border-b-2 border-gray-300 pb-2">
           Personal Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -89,10 +89,10 @@ export default function Projects() {
       </section>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-semibold mb-6 text-gray-700 border-b-2 border-gray-300 pb-2">
+        <h2 className="text-3xl font-semibold mb-6 text-teal-300 border-b-2 border-gray-300 pb-2">
           Academic Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {academicProjects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
