@@ -26,27 +26,25 @@ export default function About() {
         About Me
       </h1>
       <div className="flex flex-col md:flex-row items-center md:items-start mb-10">
-        <Image
-          src={ProfilePic1}
-          alt="Nahin Intesher"
-          width={200}
-          height={200}
-          className="rounded-full mb-6 md:mb-0 md:mr-8 border-4 border-amber-900 shadow-lg"
-        />
         <div>
           <h2 className="text-3xl font-semibold mb-6 text-amber-300">
-            Nahin Intesher
+            Personal Info
           </h2>
-          <p className="mb-6  leading-relaxed">
-            I am a dedicated developer and problem solver, currently pursuing my
-            BSCSE at United International University. With a strong academic
-            background and a passion for technology, I am constantly seeking new
-            challenges and opportunities to grow in the field of computer
-            science and engineering.
+          <p className="mb-6 leading-relaxed">
+            Hello everyone I am 
+            <span className="font-bold text-teal-200"> Nahin Intesher</span>
+            . I am currently pursuing my BSCSE at United International University.
+            With a strong academic background and a passion for technology, I am 
+            constantly seeking new challenges and opportunities to grow in the 
+            field of computer science and engineering.
           </p>
           <p className=" leading-relaxed">
-            My interests include mobile app development, cyber security, machine
-            learning, and problem-solving. I am highly motivated to teach others
+            My interests include 
+            <span className="font-bold text-teal-200 italic"> mobile app development</span>,
+            <span className="font-bold text-teal-200 italic"> cyber security</span>,
+            <span className="font-bold text-teal-200 italic"> machine learning</span> and
+            <span className="font-bold text-teal-200 italic"> problem-solving</span>
+            . I am highly motivated to teach others
             and conduct research in these areas.
           </p>
         </div>

@@ -39,15 +39,15 @@ const ResumePage = () => {
               <>
                 <Image
                   src={resume}
-                  width={700}
-                  height={500}
+                  width={800}
+                  height={700}
                   alt="Resume Preview"
                   className="border border-gray-800 rounded-lg mb-4"
                 />
                 <Image
                   src={anotherImage}
-                  width={700}
-                  height={500}
+                  width={800}
+                  height={700}
                   alt="Another Preview"
                   className="border border-gray-800 rounded-lg"
                 />

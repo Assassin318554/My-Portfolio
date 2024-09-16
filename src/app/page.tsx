@@ -33,7 +33,7 @@ const pacifico = Pacifico({
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-t from-gray-950 to-blue-900 text-white p-10">
+    <div className="flex flex-col items-center justify-center min-h-screen text-white p-10">
       <motion.div
         className="text-center"
         initial="initial"
@@ -51,7 +51,7 @@ export default function Home() {
             alt="Nahin Intesher"
             width={200}
             height={200}
-            className="rounded-full border-4 border-amber-900 shadow-lg"
+            className="rounded-full border-4 border-amber-300 shadow-lg"
           />
         </motion.div>
         <motion.h1
