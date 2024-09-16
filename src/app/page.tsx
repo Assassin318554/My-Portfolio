@@ -1,15 +1,28 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import ProfilePic1 from "@/public/images/ProfilePic1.jpg";
 import { Pacifico } from "next/font/google";
+import TypewriterHeading from "@/components/TypewriterHeading";
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 },
-  transition: { duration: 0.6 },
+// Define the correct type using Variants from Framer Motion
+const fadeInUp: Variants = {
+  initial: { 
+    opacity: 0, 
+    y: 20, 
+    transition: { duration: 0.6 } // Move transition into each state
+  },
+  animate: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6 } 
+  },
+  exit: { 
+    opacity: 0, 
+    y: -20, 
+    transition: { duration: 0.6 }
+  },
 };
 
 const pacifico = Pacifico({
@@ -47,9 +60,7 @@ export default function Home() {
         >
           Nahin Intesher
         </motion.h1>
-        <motion.h2 className="text-2xl text-amber-300 mb-6" variants={fadeInUp}>
-          Problem Solver & Dedicated Developer
-        </motion.h2>
+        <TypewriterHeading />
         <motion.p
           className="text-center max-w-3xl mx-auto mb-10 leading-relaxed"
           variants={fadeInUp}
