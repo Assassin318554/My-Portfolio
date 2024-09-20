@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-gray-950  bg-transparent backdrop-blur-3xl sticky top-0 z-50 shadow-md w-full border-b border-gray-800">
+    <nav className="bg-gray-950  bg-transparent backdrop-blur-3xl shadow-2xl sticky top-0 z-50 w-full border-b border-gray-800">
       <div className="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
         <div className="relative group">
           <Link
@@ -90,16 +90,16 @@ const Navbar: React.FC = () => {
             <li key={item} className="relative group">
               <Link
                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className={`block px-3 py-2 md:px-2 md:py-1 lg:px-3 lg:py-2 xl:px-4 xl:py-2 text-white hover:text-blue-300 transition-colors ${
-                  activeItem === item ? "text-blue-300" : ""
+                className={`block px-3 py-2 md:px-2 md:py-1 lg:px-3 lg:py-2 xl:px-4 xl:py-2 text-white hover:text-indigo-300 transition-colors ${
+                  activeItem === item ? "text-indigo-300" : ""
                 }`}
                 onClick={() => handleItemClick(item)}
               >
                 {item}
-                <span className="block absolute left-0 bottom-0 h-0.5 bg-blue-500 w-0 group-hover:w-full transition-all duration-300"></span>
+                <span className="block absolute left-0 bottom-0 h-0.5 bg-indigo-500 w-0 group-hover:w-full transition-all duration-300"></span>
               </Link>
               {item !== "Home" && (
-                <div className="hidden group-hover:block absolute left-1/2 transform -translate-x-1/2 translate-y-2 top-full mt-1 bg-blue-300 shadow-lg p-3 rounded-lg min-w-max z-50">
+                <div className="hidden group-hover:block absolute left-1/2 transform -translate-x-1/2 translate-y-2 top-full mt-1 bg-indigo-300 shadow-lg p-3 rounded-lg min-w-max z-50">
                   <p className="text-sm font-medium text-black">
                     {item === "About"
                       ? "Know about myself here"

@@ -51,7 +51,7 @@ const skills = [
 export default function About() {
   return (
     <div className="max-w-4xl mx-auto px-4 p-10">
-      <h1 className="text-4xl sm:text-5xl font-bold mb-14 text-center text-blue-300">
+      <h1 className="text-4xl sm:text-5xl font-bold mb-14 text-center text-blue-200">
         About Me
       </h1>
       <div className="flex flex-col md:flex-row items-center md:items-start mb-10">
@@ -69,22 +69,22 @@ export default function About() {
           </p>
           <p className="leading-relaxed">
             My interests include
-            <span className="font-bold text-teal-200 italic">
+            <span className="font-bold text-teal-400 italic">
               {" "}
               mobile app development
             </span>
             ,
-            <span className="font-bold text-teal-200 italic">
+            <span className="font-bold text-teal-400 italic">
               {" "}
               cyber security
             </span>
             ,
-            <span className="font-bold text-teal-200 italic">
+            <span className="font-bold text-teal-400 italic">
               {" "}
               machine learning
             </span>{" "}
             and
-            <span className="font-bold text-teal-200 italic">
+            <span className="font-bold text-teal-400 italic">
               {" "}
               problem-solving
             </span>
@@ -113,10 +113,10 @@ export default function About() {
           <li key={index} className="flex items-start">
             <FontAwesomeIcon
               icon={skill.icon}
-              className="text-teal-300 mr-2 text-lg"
+              className="text-teal-400 mr-2 text-lg"
             />
             <div>
-              <strong className="text-teal-300">{skill.category}:</strong>{" "}
+              <strong className="text-teal-400">{skill.category}:</strong>{" "}
               <span className="text-white">{skill.items}</span>
             </div>
           </li>

@@ -15,7 +15,7 @@ const Footer = () => {
 
           <div className="text-sm flex gap-1">
             <p className=""> Build by </p>
-            <p className="text-blue-300"> Nahin Intesher</p>
+            <p className="text-indigo-300"> Nahin Intesher</p>
           </div>
 
           {/* Social Links */}
@@ -24,7 +24,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/nahin-intesher-903724253/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-white hover:text-blue-400 transition-colors duration-300"
+              className="flex items-center text-white hover:text-indigo-400 transition-colors duration-300"
             >
               <Linkedin size={20} />
               <span className="ml-1">LinkedIn</span>
@@ -33,7 +33,7 @@ const Footer = () => {
               href="https://github.com/Assassin318554"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-white hover:text-blue-400 transition-colors duration-300"
+              className="flex items-center text-white hover:text-indigo-400 transition-colors duration-300"
             >
               <Github size={20} />
               <span className="ml-1">GitHub</span>
@@ -42,7 +42,7 @@ const Footer = () => {
               href="https://www.facebook.com/naahin.sikdar"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-white hover:text-blue-400 transition-colors duration-300"
+              className="flex items-center text-white hover:text-indigo-400 transition-colors duration-300"
             >
               <Facebook size={20} />
               <span className="ml-1">Facebook</span>

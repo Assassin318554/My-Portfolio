@@ -39,8 +39,8 @@ const SocialButton: React.FC<SocialButtonProps> = ({
 const Contact: React.FC = () => {
   return (
     <main className="flex items-center justify-center min-h-screen bg-gradient-to-b from-gray-950 to-blue-950 text-white px-4 py-12">
-      <div className="max-w-3xl w-full bg-gray-800 bg-opacity-50 rounded-xl shadow-2xl p-8 backdrop-blur-md">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-center text-blue-300">
+      <div className="max-w-3xl w-full bg-gray-800  rounded-xl shadow-2xl p-8 backdrop-blur-md">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-center text-blue-200">
           Let's Connect
         </h1>
         <div className="mb-8 text-center">
@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
             href="https://github.com/Assassin318554"
             icon={faGithub}
             label="GitHub"
-            bgColor="bg-gray-700 hover:bg-gray-700"
+            bgColor="bg-gray-700 hover:bg-gray-600"
           />
           <SocialButton
             href="https://www.linkedin.com/in/nahin-intesher-903724253/"

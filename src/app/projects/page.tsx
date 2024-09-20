@@ -70,14 +70,14 @@ const academicProjects = [
 
 export default function Projects() {
   return (
-    <main className="flex items-center justify-center min-h-screen bg-gradient-to-b from-gray-950 to-blue-950 text-white px-4 py-12">
+    <main className="flex items-center justify-center min-h-screen bg-gradient-to-b from-gray-950 to-indigo-950 text-white px-4 py-12">
       <div className="max-w-6xl w-full p-5">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-14 text-center text-blue-300">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-14 text-center text-blue-200">
           My Projects
         </h1>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6 text-teal-300 border-b-2 border-gray-300 pb-2">
+          <h2 className="text-3xl font-semibold mb-6 text-indigo-300 border-b-2 border-gray-300 pb-2">
             Personal Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -88,7 +88,7 @@ export default function Projects() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6 text-teal-300 border-b-2 border-gray-300 pb-2">
+          <h2 className="text-3xl font-semibold mb-6 text-indigo-300 border-b-2 border-gray-300 pb-2">
             Academic Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -24,9 +24,9 @@ const ResumePage = () => {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-10 bg-gradient-to-b from-gray-950 to-blue-950">
-      <div className="bg-gray-900 p-8 rounded-lg shadow-md w-full max-w-4xl">
-        <h1 className="text-3xl text-amber-300 font-bold mb-4">
+    <main className="flex flex-col items-center justify-center min-h-screen p-10 bg-gradient-to-b from-gray-950 to-indigo-950">
+      <div className="bg-gray-800 p-8 rounded-lg shadow-md w-full max-w-4xl">
+        <h1 className="text-3xl text-blue-200 font-bold mb-4">
           Download My Resume
         </h1>
         <p className="mb-4 text-gray-400">
@@ -61,7 +61,7 @@ const ResumePage = () => {
         <div className="flex flex-col items-center space-y-4">
           <button
             onClick={() => handleDownload(resume.src, "resume.png")}
-            className="bg-amber-500 hover:bg-amber-600 text-gray-900 px-4 py-2 rounded-lg shadow-md flex items-center"
+            className="bg-amber-400 hover:bg-amber-500 text-gray-900 px-4 py-2 rounded-lg shadow-md flex items-center"
           >
             <FontAwesomeIcon icon={faDownload} className="mr-2" />
             Download Front Page Image
@@ -70,7 +70,7 @@ const ResumePage = () => {
             onClick={() =>
               handleDownload(anotherImage.src, "another-image.png")
             }
-            className="bg-amber-500 hover:bg-amber-600 text-gray-900 px-4 py-2 rounded-lg shadow-md flex items-center"
+            className="bg-amber-400 hover:bg-amber-500 text-gray-900 px-4 py-2 rounded-lg shadow-md flex items-center"
           >
             <FontAwesomeIcon icon={faDownload} className="mr-2" />
             Download Back Page Image

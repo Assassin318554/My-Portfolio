@@ -10,16 +10,16 @@ export default function Home() {
     <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-950 to-blue-950 text-white px-4">
       <div className="text-center max-w-4xl w-full p-4">
         <div className="mb-8 relative">
-          <div className="w-48 h-48 rounded-full overflow-hidden mx-auto border-4 border-blue-400 shadow-lg mt-5">
+          <div className="w-48 h-48 rounded-full overflow-hidden mx-auto border-4 border-indigo-400 shadow-lg mt-5">
             <Image
               src={profile} // Replace with your actual image path
-              alt="Afran Hossan Reaz"
+              alt="Nahin Intesher"
               width={400} // Adjusted for responsive design
               height={400} // Adjusted for responsive design
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-500 px-4 py-1 rounded-full">
+          <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-indigo-500 px-4 py-1 rounded-full">
             <p className="text-sm font-semibold">
               Hello everyone <span className="wave">👋</span>
             </p>
@@ -65,16 +65,16 @@ export default function Home() {
 
         <TypewriterHeading />
 
-        <div className="flex flex-col sm:flex-row justify-center space-x-0 sm:space-x-4 mt-4">
+        <div className="flex flex-col gap-2 sm:flex-row justify-center space-x-0 sm:space-x-4 mt-4">
           <Link
             href="/projects"
-            className="bg-transparent hover:bg-blue-700 text-blue-100 hover:text-white font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded-full transition duration-300"
+            className="bg-transparent hover:bg-indigo-700 text-blue-100 hover:text-white font-semibold py-2 px-4 border border-indigo-500 hover:border-transparent rounded-lg transition duration-300"
           >
             View Projects
           </Link>
           <Link
             href="/contact"
-            className="bg-transparent hover:bg-blue-700 text-blue-100 hover:text-white font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded-full transition duration-300"
+            className="bg-transparent hover:bg-indigo-700 text-blue-100 hover:text-white font-semibold py-2 px-4 border border-indigo-500 hover:border-transparent rounded-lg transition duration-300"
           >
             Contact Me
           </Link>
@@ -82,17 +82,17 @@ export default function Home() {
       </div>
 
       <div className="mt-16 mb-5 text-center">
-        <p className="text-lg text-gray-300 mb-4">Specializing in</p>
+        <p className="text-lg text-gray-300 mb-4">Want to Specialize in</p>
         <div className="flex flex-wrap justify-center gap-4">
           {[
-            { label: "Machine Learning", icon: <FaRobot /> },
-            { label: "AI", icon: <FaBrain /> },
             { label: "Mobile App Development", icon: <FaMobileAlt /> },
-            { label: "Web Development", icon: <FaLaptopCode /> },
+            { label: "Artificial Intelligence", icon: <FaBrain /> },
+            { label: "Machine Learning", icon: <FaRobot /> },
+            { label: "Cyber Security", icon: <FaLaptopCode /> },
           ].map(({ label, icon }) => (
             <span
               key={label}
-              className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm flex items-center"
+              className="bg-indigo-800 text-white px-3 py-2 rounded-lg text-sm flex items-center"
             >
               {icon}
               <span className="ml-2">{label}</span>
