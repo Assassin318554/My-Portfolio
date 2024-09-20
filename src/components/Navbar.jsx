@@ -2,19 +2,19 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-const navItems: string[] = [
-  "Home",
-  "About",
-  "Projects",
-  "Achievements",
-  "Contact",
-  "Resume",
-];
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState(null);
+  const [showLogoPopup, setShowLogoPopup] = useState(false);
 
-const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [activeItem, setActiveItem] = useState<string | null>(null);
-  const [showLogoPopup, setShowLogoPopup] = useState<boolean>(false);
+  const navitems = [
+    "Home",
+    "About",
+    "Projects",
+    "Experience",
+    "Awards",
+    "Contact",
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,15 +22,15 @@ const Navbar: React.FC = () => {
         setIsOpen(false);
       }
     };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleItemClick = (item: string) => {
+  const handleItemClick = (item) => {
     setActiveItem(item);
     setIsOpen(false);
   };
@@ -46,13 +46,13 @@ const Navbar: React.FC = () => {
             onMouseLeave={() => setShowLogoPopup(false)}
             onClick={() => setShowLogoPopup(!showLogoPopup)} // Toggle on click for mobile
           >
-            Nahin
+            Reaz
             <span className="block absolute left-0 bottom-0 h-0.5 bg-amber-500 w-0 group-hover:w-full transition-all duration-300"></span>
           </Link>
           {showLogoPopup && (
             <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 bg-amber-400 shadow-lg p-4 rounded-lg min-w-max z-50">
               <p className="text-sm font-medium text-black">
-                Hello, I'm Nahin! Welcome to my portfolio page.
+                Hello, I'm Reaz! Welcome to my portfolio page.
               </p>
             </div>
           )}
@@ -84,7 +84,7 @@ const Navbar: React.FC = () => {
             isOpen ? "flex" : "hidden"
           } md:flex flex-col md:flex-row w-full md:w-auto mt-4 md:mt-0 md:space-x-1 lg:space-x-2 xl:space-x-4`}
         >
-          {navItems.map((item) => (
+          {navitems.map((item) => (
             <li key={item} className="relative group">
               <Link
                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
@@ -111,6 +111,4 @@ const Navbar: React.FC = () => {
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

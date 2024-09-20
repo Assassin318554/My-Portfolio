@@ -39,26 +39,26 @@ const TypewriterHeading = () => {
 
   // Define the correct type using Variants from Framer Motion
   const fadeInUp: Variants = {
-    initial: { 
-      opacity: 0, 
-      y: 20, 
-      transition: { duration: 0.6 } // Move transition into each state
+    initial: {
+      opacity: 0,
+      y: 20,
+      transition: { duration: 0.6 }, // Move transition into each state
     },
-    animate: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.6 } 
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
     },
-    exit: { 
-      opacity: 0, 
-      y: -20, 
-      transition: { duration: 0.6 }
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: { duration: 0.6 },
     },
   };
 
   return (
     <motion.h2
-      className="text-2xl text-amber-300 mb-6 min-h-[2rem]"
+      className="text-xl text-white mb-6 min-h-[2rem]"
       variants={fadeInUp}
       initial="initial"
       animate="animate"

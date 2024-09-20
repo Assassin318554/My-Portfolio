@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faNodeJs, faJava, faPython, faHtml5, faCss3Alt, faAndroid, faJsSquare } from '@fortawesome/free-brands-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons'; // Fallback icon
 
 interface ProjectCardProps {
   title: string;
@@ -7,6 +10,19 @@ interface ProjectCardProps {
   githubLink: string;
   date: string;
 }
+
+const technologyIcons: Record<string, any> = {
+  'React JS': faReact,
+  'Node JS': faNodeJs,
+  'Java': faJava,
+  'Python': faPython,
+  'HTML': faHtml5,
+  'CSS': faCss3Alt,
+  'Flutter': faAndroid,
+  'Next JS': faReact, // Use React icon for Next.js
+  'JavaFX': faJava, // Use Java icon for JavaFX
+  'JavaScript': faJsSquare, // JavaScript icon
+};
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technologies, githubLink, date }) => {
   return (
@@ -17,7 +33,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technolog
         <h4 className="font-semibold mb-2">Technologies:</h4>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech, index) => (
-            <span key={index} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
+            <span key={index} className="flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
+              <FontAwesomeIcon icon={technologyIcons[tech] || faCode} className="mr-1" />
               {tech}
             </span>
           ))}

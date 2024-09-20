@@ -68,38 +68,38 @@ const academicProjects = [
   },
 ];
 
-// You can add research projects here if you have any
-
 export default function Projects() {
   return (
-    <div className="max-w-6xl mx-auto p-10">
-      <h1 className="text-4xl font-extrabold mb-12 text-amber-300">
-        My Projects
-      </h1>
+    <main className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white px-4 py-12">
+      <div className="max-w-6xl w-full p-5">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-14 text-center text-blue-300">
+          My Projects
+        </h1>
 
-      <section className="mb-16">
-        <h2 className="text-3xl font-semibold mb-6 text-teal-300 border-b-2 border-gray-300 pb-2">
-          Personal Projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {personalProjects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
-        </div>
-      </section>
+        <section className="mb-16">
+          <h2 className="text-3xl font-semibold mb-6 text-teal-300 border-b-2 border-gray-300 pb-2">
+            Personal Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {personalProjects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </section>
 
-      <section className="mb-16">
-        <h2 className="text-3xl font-semibold mb-6 text-teal-300 border-b-2 border-gray-300 pb-2">
-          Academic Projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-          {academicProjects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
-        </div>
-      </section>
+        <section className="mb-16">
+          <h2 className="text-3xl font-semibold mb-6 text-teal-300 border-b-2 border-gray-300 pb-2">
+            Academic Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {academicProjects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </section>
 
-      {/* Add Research Projects section here if you have any */}
-    </div>
+        {/* Add Research Projects section here if you have any */}
+      </div>
+    </main>
   );
 }

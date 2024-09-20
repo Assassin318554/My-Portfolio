@@ -1,18 +1,38 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faPuzzlePiece } from '@fortawesome/free-solid-svg-icons';
+"use client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTrophy,
+  faMedal,
+  faStar,
+  faPuzzlePiece,
+  faCode,
+} from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
-const achievements = [
+interface Achievement {
+  title: string;
+  description: React.ReactNode;
+  icon: any; // Use `any` for FontAwesome icons, or you can use `IconDefinition`
+}
+
+const achievements: Achievement[] = [
   {
     title: "1st runner up at UIU juniors programming",
-    description: "Secured the first runner-up position in the UIU juniors programming competition.",
+    description:
+      "Secured the first runner-up position in the UIU juniors programming competition.",
+    icon: faMedal,
   },
   {
     title: "100% scholarship in 2 trimesters",
-    description: "Awarded a 100% scholarship for academic excellence in two trimesters.",
+    description:
+      "Awarded a 100% scholarship for academic excellence in two trimesters.",
+    icon: faStar,
   },
   {
     title: "50% scholarship in 4 trimesters",
-    description: "Received a 50% scholarship for outstanding academic performance in four trimesters.",
+    description:
+      "Received a 50% scholarship for outstanding academic performance in four trimesters.",
+    icon: faTrophy,
   },
   {
     title: "260+ problems solved on Codeforces",
@@ -32,6 +52,7 @@ const achievements = [
         </a>
       </div>
     ),
+    icon: faCode,
   },
   {
     title: "40+ problems solved on LeetCode",
@@ -51,21 +72,51 @@ const achievements = [
         </a>
       </div>
     ),
+    icon: faPuzzlePiece,
   },
 ];
 
-export default function Achievements() {
+const Achievements: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // Avoid rendering until the component is mounted on the client
+  }
+
   return (
-    <div className="max-w-4xl mx-auto p-10">
-      <h1 className="text-3xl font-bold mb-8 text-amber-300">Achievements</h1>
-      <div className="space-y-6">
-        {achievements.map((achievement, index) => (
-          <div key={index} className="bg-gray-900 shadow-lg rounded-lg p-6">
-            <h3 className="text-xl font-semibold mb-3">{achievement.title}</h3>
-            <div className="">{achievement.description}</div>
-          </div>
-        ))}
+    <main className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white px-4 py-12">
+      <div className="max-w-6xl w-full p-5">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-14 text-center text-blue-300">
+          Achievements
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {achievements.map((achievement, index) => (
+            <div
+              key={index}
+              className="bg-gray-700 bg-opacity-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
+            >
+              <div className="flex items-start mb-3">
+                <FontAwesomeIcon
+                  icon={achievement.icon}
+                  className="w-5 h-5 mr-3 text-yellow-400"
+                />
+                <h2 className="text-xl font-semibold text-amber-300">
+                  {achievement.title}
+                </h2>
+              </div>
+              <p className="font-medium text-gray-200">
+                {achievement.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </main>
   );
-}
+};
+
+export default Achievements;
