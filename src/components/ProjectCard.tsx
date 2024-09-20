@@ -31,10 +31,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technolog
       <p className="text-gray-200 text-sm mb-4">{description}</p>
       <div className="mb-4">
         <h4 className="font-semibold mb-2">Technologies:</h4>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-3">
           {technologies.map((tech, index) => (
             <span key={index} className="flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
-              <FontAwesomeIcon icon={technologyIcons[tech] || faCode} className="mr-1" />
+              <FontAwesomeIcon icon={technologyIcons[tech] || faCode} className="mr-2 w-5 h-5" />
               {tech}
             </span>
           ))}

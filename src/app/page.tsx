@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-blue-900 text-white px-4">
+    <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-950 to-blue-950 text-white px-4">
       <div className="text-center max-w-4xl w-full p-4">
         <div className="mb-8 relative">
           <div className="w-48 h-48 rounded-full overflow-hidden mx-auto border-4 border-blue-400 shadow-lg mt-5">
@@ -30,14 +30,30 @@ export default function Home() {
                 transform-origin: 70% 70%;
               }
               @keyframes wave-animation {
-                0% { transform: rotate(0deg); }
-                10% { transform: rotate(14deg); }
-                20% { transform: rotate(-8deg); }
-                30% { transform: rotate(14deg); }
-                40% { transform: rotate(-4deg); }
-                50% { transform: rotate(10deg); }
-                60% { transform: rotate(0deg); }
-                100% { transform: rotate(0deg); }
+                0% {
+                  transform: rotate(0deg);
+                }
+                10% {
+                  transform: rotate(14deg);
+                }
+                20% {
+                  transform: rotate(-8deg);
+                }
+                30% {
+                  transform: rotate(14deg);
+                }
+                40% {
+                  transform: rotate(-4deg);
+                }
+                50% {
+                  transform: rotate(10deg);
+                }
+                60% {
+                  transform: rotate(0deg);
+                }
+                100% {
+                  transform: rotate(0deg);
+                }
               }
             `}</style>
           </div>
@@ -50,8 +66,9 @@ export default function Home() {
         <TypewriterHeading />
 
         <div className="flex flex-col sm:flex-row justify-center space-x-0 sm:space-x-4 mt-4">
-          <Link href="/projects"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 mb-2 sm:mb-0"
+          <Link
+            href="/projects"
+            className="bg-transparent hover:bg-blue-700 text-blue-100 hover:text-white font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded-full transition duration-300"
           >
             View Projects
           </Link>

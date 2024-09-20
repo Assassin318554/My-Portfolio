@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${quicksand.className} bg-gradient-to-t from-gray-950 to-blue-950 text-white flex flex-col min-h-screen`}
+        className={`${quicksand.className} bg-gradient-to-b from-gray-950 to-blue-950 text-white flex flex-col min-h-screen`}
       >
         <Header />
         <main className="flex-grow min-w-screen">

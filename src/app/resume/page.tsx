@@ -24,8 +24,8 @@ const ResumePage = () => {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-10 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-      <div className="bg-gray-800 p-8 rounded-lg shadow-md w-full max-w-4xl">
+    <main className="flex flex-col items-center justify-center min-h-screen p-10 bg-gradient-to-b from-gray-950 to-blue-950">
+      <div className="bg-gray-900 p-8 rounded-lg shadow-md w-full max-w-4xl">
         <h1 className="text-3xl text-amber-300 font-bold mb-4">
           Download My Resume
         </h1>

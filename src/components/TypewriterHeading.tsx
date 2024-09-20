@@ -58,7 +58,7 @@ const TypewriterHeading = () => {
 
   return (
     <motion.h2
-      className="text-xl text-white mb-6 min-h-[2rem]"
+      className="text-md text-white mb-6 "
       variants={fadeInUp}
       initial="initial"
       animate="animate"

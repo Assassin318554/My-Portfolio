@@ -36,22 +36,24 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-black bg-opacity-90 sticky top-0 z-50 shadow-md w-full">
+    <nav className="bg-gray-950  bg-transparent backdrop-blur-3xl sticky top-0 z-50 shadow-md w-full border-b border-gray-800">
       <div className="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
         <div className="relative group">
           <Link
             href="/"
-            className="text-2xl md:text-3xl font-extrabold text-amber-400 px-2 py-3 md:px-4 md:py-2 transition duration-300 ease-in-out"
+            className="group relative text-2xl md:text-3xl font-extrabold text-amber-400 px-2 py-3 md:px-4 md:py-2 transition duration-300 ease-in-out"
             onMouseEnter={() => setShowLogoPopup(true)}
             onMouseLeave={() => setShowLogoPopup(false)}
-            onClick={() => setShowLogoPopup(!showLogoPopup)} // Toggle on click for mobile
           >
-            Nahin
+            <span className="text-amber-400 group-hover:text-amber-500 transition-all duration-300">
+              Nahin
+            </span>
             <span className="block absolute left-0 bottom-0 h-0.5 bg-amber-500 w-0 group-hover:w-full transition-all duration-300"></span>
           </Link>
+
           {showLogoPopup && (
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 bg-amber-400 shadow-lg p-4 rounded-lg min-w-max z-50">
-              <p className="text-sm font-medium text-black">
+            <div className="absolute left-1/2 transform -translate-x-1/2 translate-y-2 top-full mt-2  bg-amber-400 shadow-lg p-4 rounded-lg min-w-max z-50">
+              <p className="text-sm font-medium text-black ">
                 Hello, I'm Nahin! Welcome to my portfolio page.
               </p>
             </div>
@@ -97,7 +99,7 @@ const Navbar: React.FC = () => {
                 <span className="block absolute left-0 bottom-0 h-0.5 bg-blue-500 w-0 group-hover:w-full transition-all duration-300"></span>
               </Link>
               {item !== "Home" && (
-                <div className="hidden group-hover:block absolute left-1/2 transform -translate-x-1/2 top-full mt-1 bg-blue-300 shadow-lg p-3 rounded-lg min-w-max z-50">
+                <div className="hidden group-hover:block absolute left-1/2 transform -translate-x-1/2 translate-y-2 top-full mt-1 bg-blue-300 shadow-lg p-3 rounded-lg min-w-max z-50">
                   <p className="text-sm font-medium text-black">
                     {item === "About"
                       ? "Know about myself here"
