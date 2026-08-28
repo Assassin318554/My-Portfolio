@@ -325,10 +325,13 @@ export const skills = [
   },
   {
     category: "Web Development",
-    items: ["Next.js", "React", "Node.js", "Express.js"],
+    items: ["Next.js", "React", "Node.js", "Express.js", "React Native"],
   },
   { category: "Database", items: ["PostgreSQL", "MySQL"] },
-  { category: "Tools", items: ["Git", "GitHub", "Linux", "Docker", "LaTeX"] },
+  {
+    category: "Tools",
+    items: ["Git", "GitHub", "Linux", "LaTeX", "Adobe Illustrator", "Figma"],
+  },
 ];
 
 /* ---------------- Achievements ---------------- */
