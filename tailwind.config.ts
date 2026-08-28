@@ -1,20 +1,17 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
+import type { Config } from "tailwindcss";
 
-module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+const config: Config = {
+  darkMode: "class",
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-poppins)", ...fontFamily.sans],
-      },
-      backgroundImage: {
-        image: "url('/src/public/images/bg.jpg')",
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "Menlo", "monospace"],
       },
     },
   },
   plugins: [],
 };
+export default config;
