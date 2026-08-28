@@ -161,11 +161,16 @@ export const teaching = {
   orgPlace: "United International University",
   desc: "Selected by the department to support first- and second-year laboratory sessions. Responsibilities included preparing weekly problem sets, running problem-solving sessions before midterms, and one-to-one mentoring during office hours.",
   points: [
-    "Supported lab sessions for Programming Fundamentals, Data Structures, and Algorithms — roughly 120 students across three semesters.",
-    "Designed tutorial sheets and starter code that were reused by subsequent cohorts.",
-    "Mentored 15+ first-year students through the department's peer-mentoring initiative.",
+    "Supported lab sessions for Programming Fundamentals, Data Structures, and Algorithms — many students across six trimesters.",
+    "Mentored many first-year students through the department's peer-mentoring initiative.",
   ],
-  interests: ["Deep Learning", "Computer Vision", "Human-Computer Interaction"],
+  interests: [
+    "Programming Fundamentals",
+    "Object-Oriented Programming",
+    "Data Structures and Algorithms",
+    "Database Management Systems",
+    "Machine Learning",
+  ],
 };
 
 /* ---------------- Projects ---------------- */
