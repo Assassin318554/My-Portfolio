@@ -79,20 +79,6 @@ export default function ContactPage() {
                     nahinintesher <ArrowUpRight />
                   </a>
                 </div>
-                <div className="c-row">
-                  <span className="c-icon">
-                    <GraduationCap strokeWidth={1.75} />
-                  </span>
-                  <span className="c-label">Scholar</span>
-                  <a
-                    className="c-value"
-                    href={profile.scholar}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    nahinintesher <ArrowUpRight />
-                  </a>
-                </div>
               </div>
             </div>
 

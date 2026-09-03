@@ -360,4 +360,12 @@
   .pub-abs p { margin-inline: 0.25rem; }
   .r-item, .pub-row, .proj { margin: 0 -0.4rem; padding-inline: 0.4rem; }
   .toc-row { grid-template-columns: 40px minmax(0, 1fr) auto; gap: 0.9rem; }
+  .cp-list li { grid-template-columns: 96px minmax(0, 1fr); gap: 1rem; }
 }
+  /* ---- achievements: competitive programming rows ---- */
+  .cp-list { border-bottom: 1px solid var(--line); }
+  .cp-list li { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 1rem 2rem; align-items: baseline; padding: 1.05rem 0; border-top: 1px solid var(--line); }
+  .cp-platform { font: 500 0.78rem var(--mono); letter-spacing: 0.04em; color: var(--muted); }
+  .a-title.is-link { display: inline-flex; align-items: center; gap: 0.35rem; }
+  .a-title.is-link svg { width: 12px; height: 12px; }
+  .a-title.is-link:hover { color: var(--accent); }

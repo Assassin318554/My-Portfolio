@@ -9,9 +9,9 @@ const instrumentSans = Instrument_Sans({ subsets: ["latin"], variable: "--font-s
 const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
-  title: { default: "Nahin Intesher — CSE · Research & Teaching", template: "%s · Nahin Intesher" },
+  title: { default: "Nahin Intesher", template: "%s · Nahin Intesher" },
   description:
-    "Academic portfolio of Nahin Intesher — CSE graduate interested in teaching, research, computer vision, human–computer interaction, and assistive technology.",
+    "Academic portfolio of Nahin Intesher — final-trimester CSE student at United International University, interested in teaching, research, computer vision, human-computer interaction, and assistive technology.",
 };
 
 export const viewport: Viewport = {

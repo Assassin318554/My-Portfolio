@@ -21,7 +21,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => setOpen(false), [pathname]); // close on navigation
+  useEffect(() => setOpen(false), [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -42,7 +42,8 @@ export default function Header() {
     <header className={`site-header${scrolled ? " scrolled" : ""}`}>
       <div className="container header-inner">
         <Link href="/" className="brand">
-          Nahin Intesher  
+          {profile.name}
+          <span className="dot">.</span>
         </Link>
         <nav className="main-nav" aria-label="Primary">
           {desktopNav.map((r) => (
@@ -55,7 +56,7 @@ export default function Header() {
               {r.short}
             </Link>
           ))}
-          <a className="nav-cv p-3" href={profile.cv}>
+          <a className="nav-cv" href={profile.cv}>
             CV <ArrowUpRight size={13} strokeWidth={1.75} />
           </a>
         </nav>
@@ -92,7 +93,12 @@ export default function Header() {
             {r.short}
           </Link>
         ))}
-        <a className="mn-cv" href={profile.cv}>
+        <a
+          className="mn-cv"
+          href={profile.cv}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Curriculum Vitae <ArrowUpRight size={14} />
         </a>
       </nav>

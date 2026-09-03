@@ -18,7 +18,7 @@ export default function HomePage() {
           <div className="hero-copy text-justify">
             <h1 className="hero-name">Nahin Intesher</h1>
             <p className="hero-role">
-              Computer Science &amp; Engineering Graduate
+              Computer Science &amp; Engineering Student
             </p>
             <p className="hero-interests">
               Interested in <em>Computer Vision</em>, <em>Deep Learning</em>,{" "}
@@ -28,7 +28,7 @@ export default function HomePage() {
             <p className="hero-bio">{heroBio}</p>
             <div className="hero-actions">
               {/* TODO: CV file at public/Nahin-Intesher-CV.pdf */}
-              <a className="btn btn-solid" href={profile.cv}>
+              <a className="btn btn-solid" href={profile.cv} target="_blank" rel="noopener noreferrer">
                 View CV <FileText />
               </a>
               <Link className="btn btn-ghost" href="/research">
@@ -55,7 +55,7 @@ export default function HomePage() {
             {/* TODO: replace with your professional portrait (4:5 works best) */}
             <img
               src="/cvimage.jpg"
-              alt="Portrait of Nahin Intesher (placeholder)"
+              alt="Nahin Intesher"
               width={640}
               height={800}
             />

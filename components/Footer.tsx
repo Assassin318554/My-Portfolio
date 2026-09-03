@@ -8,12 +8,14 @@ export default function Footer() {
       <div className="container">
         <div className="footer-top">
           <div>
-            <p className="f-name">Nahin Intesher</p>
+            <p className="f-name">
+              {profile.name}
+              <span className="dot">.</span>
+            </p>
             <p className="f-role">
-              Computer Science &amp; Engineering · Dhaka, Bangladesh
+              Computer Science &amp; Engineering · {profile.location}
             </p>
           </div>
-          {/* TODO: replace URLs in lib/data.ts */}
           <div className="f-ext">
             <a href={profile.github} target="_blank" rel="noopener">
               GitHub <ArrowUpRight />
@@ -21,14 +23,12 @@ export default function Footer() {
             <a href={profile.linkedin} target="_blank" rel="noopener">
               LinkedIn <ArrowUpRight />
             </a>
-            <a href={profile.scholar} target="_blank" rel="noopener">
-              Google Scholar <ArrowUpRight />
-            </a>
             <a href={`mailto:${profile.email}`}>Email</a>
           </div>
         </div>
+
         <div className="f-bottom justify-center">
-          <span>© 2026 Nahin Intesher — All rights reserved.</span>
+          <span>© 2026 {profile.name} — All rights reserved.</span>
         </div>
       </div>
     </footer>
